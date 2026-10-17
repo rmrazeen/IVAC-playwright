@@ -1,0 +1,17 @@
+{
+  "note": "Shape example only. Copy steps into applicationSteps in your local portal config using actual inspected selectors. These selectors are not verified IVAC selectors.",
+  "applicationSteps": [
+    {
+      "ready": "#applicant-form",
+      "fields": [
+        { "selector": "#full-name", "value": "YOUR FULL NAME", "kind": "fill" },
+        { "selector": "#visa-type", "value": "YOUR OPTION LABEL", "kind": "select" }
+      ],
+      "uploads": [
+        { "selector": "input[name='passport']", "file": "passport.pdf" },
+        { "selector": "input[name='photo']", "file": "photo.jpg" }
+      ],
+      "continueButton": "#application-next"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "playwright-ivac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:edge": "playwright test tests/edge-signin.spec.ts --project=chromium --workers=1 --reporter=list",
+    "edge:start": "node --env-file=.env scripts/start-edge.cjs",
+    "book": "playwright test --config=playwright.booking.config.ts",
+    "test:offline": "playwright test --config=playwright.offline.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5"
+  }
+}

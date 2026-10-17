@@ -1,0 +1,51 @@
+{
+  "note": "Screens and button labels verified against local video. DOM attributes/selectors remain inferred and need live verification. Mission/center and PDF filenames must come from the user, not the video's applicant.",
+  "url": "https://appointment.ivacbd.com/signin",
+  "login": {
+    "username": "input[name='username'], input[name='phone'], input[type='tel'], input[placeholder*='mobile' i], input[placeholder*='phone' i]",
+    "password": "input[type='password']",
+    "submit": "button:has-text('Sign In Now')",
+    "otp": "input[autocomplete='one-time-code'], input[name='otp'], input[maxlength='1']",
+    "verify": "button:has-text('Verify OTP')",
+    "authenticated": "button:has-text('Logout')"
+  },
+  "dismissButtons": [
+    "[role='dialog'] button[aria-label='Close']",
+    "[role='dialog'] button:text-is('Close')",
+    "[role='dialog'] button:text-is('Dismiss')"
+  ],
+  "applicationSteps": [],
+  "webfiles": {
+    "primaryInput": "input[type='file']",
+    "additionalInput": "input[type='file']",
+    "primaryReady": "text=/^Primary Applicant$/",
+    "applicantCount": "text=/Total number of applicants:/",
+    "continueButton": "button:has-text('Confirm All Information is Correct')",
+    "maxBytes": 500000
+  },
+  "mission": {
+    "missionTrigger": "text=Select a mission",
+    "centerTrigger": "text=Select your IVAC center",
+    "continueButton": "button:has-text('Confirm Mission & IVAC Center')",
+    "ready": "button:has-text('Confirm Mission & IVAC Center')"
+  },
+  "slots": {
+    "mode": "calendar",
+    "calendarDayButtons": ".rdp-day_button, button.rdp-day, .rdp-day button, button[name='day'], [role='gridcell'] button",
+    "nextMonth": "",
+    "maxMonths": 1,
+    "dateSelect": "",
+    "timeSelect": "",
+    "continueButton": "button:has-text('Continue Booking')",
+    "unavailable": "[role='alert']:text-matches('slot.*(unavailable|not available|fully booked)|no.*slots?|date.*(unavailable|not available)', 'i'), [data-sonner-toast]:text-matches('slot.*(unavailable|not available|fully booked)|no.*slots?|date.*(unavailable|not available)', 'i')",
+    "paymentReady": "button:has-text('Continue Payment')",
+    "resultTimeoutMs": 30000
+  },
+  "messages": {
+    "conversationHeader": "",
+    "incomingRows": "",
+    "messageText": "",
+    "messageIdAttribute": "data-message-id",
+    "timestampAttribute": "data-timestamp"
+  }
+}
